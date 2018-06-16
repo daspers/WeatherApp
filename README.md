@@ -9,8 +9,7 @@ Terdapat berbagai jenis sistem API yang dapat digunakan, termasuk sistem operasi
 # Open Weather Map API
 
 Open Weather Map API digunakan untuk mendapatkan data perkiraan cuaca pada daerah/kota tertentu. 
-Open Weather Map API akan mengembalikan request dalam bentuk JSON.
-Open Weather Map API menggunakan RESTful API.
+Open Weather Map API akan mengembalikan request dalam bentuk JSON/XML.
 
 # Struktur Package
 
