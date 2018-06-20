@@ -3,41 +3,59 @@ package com.data.city;
 import com.data.Coordinate;
 
 public class City {
-  private String id;
+  private int id;
   private String name;
-  private Coordinate coor;
-  private String countrycode;
-  City(String _id, String _nm, Coordinate _coor, String _cc){
+  private Coordinate coord;
+  private String country;
+  public City(int _id, String _nm, Coordinate _coor, String _cc){
     id = _id;
     name = _nm;
-    coor = _coor;
-    countrycode = _cc;
+    coord = _coor;
+    country = _cc;
   }
-  City(String _id, String _nm, String lat, String lon, String _cc){
+  public City(int _id, String _nm, double lat, double lon, String _cc){
     id = _id;
     name = _nm;
-    coor = new Coordinate(lat, lon);
-    countrycode = _cc;
+    coord = new Coordinate(lat, lon);
+    country = _cc;
   }
-  City(String[] arr){
-    id = arr[0];
+  public City(String[] arr){
+    id = Integer.parseInt(arr[0]);
     name = arr[1];
-    coor = new Coordinate(arr[2], arr[3]);
-    countrycode = arr[4];
+    coord = new Coordinate(Double.parseDouble(arr[2]), Double.parseDouble(arr[3]));
+    country = arr[4];
   }
-  City(City other){
-    this(new String(other.getID()), new String(other.getName()), new Coordinate(other.getCoordinate()), new String(other.getCountryCode()));
-  }
-  public String getID(){
-    return id;
+  public City(City other){
+    this(other.getId(), new String(other.getName()), new Coordinate(other.getCoord()), new String(other.getCountry()));
   }
   public String getName(){
     return name;
   }
-  public Coordinate getCoordinate(){
-    return coor;
+  public Coordinate getCoord(){
+    return coord;
   }
-  public String getCountryCode(){
-    return countrycode;
+
+  public String getCountry() {
+    return country;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setCoord(Coordinate coord) {
+    this.coord = coord;
+  }
+
+  public void setCountry(String country) {
+    this.country = country;
   }
 }

@@ -1,19 +1,28 @@
 package com.data;
 
 public class Coordinate {
-  private String lat;
-  private String lon;
-  public Coordinate(String _lat, String _lon){
+  private double lat;
+  private double lon;
+  public Coordinate(double _lat, double _lon){
     lat = _lat;
     lon = _lon;
   }
   public Coordinate(Coordinate other){
-    this(other.latitude(), other.longitude());
+    this(other.getLat(), other.getLon());
   }
-  String longitude(){
+  public double getLat() {
+    return lat;
+  }
+
+  public void setLat(double lat) {
+    this.lat = lat;
+  }
+
+  public double getLon() {
     return lon;
   }
-  String latitude(){
-    return lat;
+
+  public void setLon(double lon) {
+    this.lon = lon;
   }
 }
