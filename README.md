@@ -13,12 +13,15 @@ Open Weather Map API akan mengembalikan request dalam bentuk JSON/XML.
 
 # Struktur Package
 
-package akan dibagi atas GUI dan API (data retrival)
+package terbagi atas:
+- api client
+- data
+- gui
 
 # Checklist
 
-- [ ] Open Weather Map API
-- [ ] Pencarian Kota
+- [x] Open Weather Map API
+- [x] Pencarian Kota
 - [ ] Main
 - [ ] UI
 
