@@ -14,7 +14,7 @@ public class GetCityList {
   static private City[] citylist = null;
   private GetCityList(){
     try {
-      BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Tony\\Documents\\GitHub\\WeatherApp\\src\\com\\data\\city\\citylist.json"));
+      BufferedReader reader = new BufferedReader(new FileReader(getClass().getResource("../../resource/citylist.json").getFile()));
       Gson data = new Gson();
       citylist = data.fromJson(reader, City[].class);
       for(City city : citylist){
