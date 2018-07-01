@@ -1,5 +1,7 @@
 package com.api.weather;
 
+import com.data.ForecastData;
+import com.data.WeatherData;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.IOException;
