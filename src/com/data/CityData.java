@@ -1,31 +1,29 @@
-package com.data.city;
+package com.data;
 
-import com.data.Coordinate;
-
-public class City {
+public class CityData {
   private int id;
   private String name;
   private Coordinate coord;
   private String country;
-  public City(int _id, String _nm, Coordinate _coor, String _cc){
+  public CityData(int _id, String _nm, Coordinate _coor, String _cc){
     id = _id;
     name = _nm;
     coord = _coor;
     country = _cc;
   }
-  public City(int _id, String _nm, double lat, double lon, String _cc){
+  public CityData(int _id, String _nm, double lat, double lon, String _cc){
     id = _id;
     name = _nm;
     coord = new Coordinate(lat, lon);
     country = _cc;
   }
-  public City(String[] arr){
+  public CityData(String[] arr){
     id = Integer.parseInt(arr[0]);
     name = arr[1];
     coord = new Coordinate(Double.parseDouble(arr[2]), Double.parseDouble(arr[3]));
     country = arr[4];
   }
-  public City(City other){
+  public CityData(CityData other){
     this(other.getId(), new String(other.getName()), new Coordinate(other.getCoord()), new String(other.getCountry()));
   }
   public String getName(){
