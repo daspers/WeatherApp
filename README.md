@@ -14,9 +14,10 @@ Open Weather Map API akan mengembalikan request dalam bentuk JSON/XML.
 # Struktur Package
 
 package terbagi atas:
-- api client
-- data
-- gui
+- api client : Menyimpan class yang bertanggung jawab atas komunikasi dengan openweathermap api
+- city : Menyimpan class yang bertanggung jawab atas pencarian kota
+- data : Menyimpan class yang merupakan struktur data
+- gui : Menyimpan class yang bertanggung jawab atas GUI dan event-event
 
 # Checklist
 
