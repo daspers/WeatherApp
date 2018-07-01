@@ -1,14 +1,13 @@
 package com.data;
 
 import com.api.weather.MainData;
-import com.data.city.City;
 import java.util.List;
 
 public class ForecastData {
   private String cod;
   private double message;
   private int cnt;
-  private City city;
+  private CityData city;
   private List<ListBean> list;
 
   public String getCod() {
@@ -35,11 +34,11 @@ public class ForecastData {
     this.cnt = cnt;
   }
 
-  public City getCity() {
+  public CityData getCity() {
     return city;
   }
 
-  public void setCity(City city) {
+  public void setCity(CityData city) {
     this.city = city;
   }
 
